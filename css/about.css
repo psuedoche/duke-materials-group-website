@@ -1,0 +1,26 @@
+.full-page-content-container a {
+    color: var(--contrast-color-3);
+}
+.light-content-block h1 {
+    color: #5271FF;
+}
+.light-content-block {
+    padding: 3rem 5rem; 
+    width: 100vw;
+}
+.content-text {
+    margin: 2rem 0;
+    max-width: 1500px;
+}
+#all-open-positions h3, #all-open-positions p, h2,a{
+    margin: 0 0.5rem;
+    display: inline-block;
+    letter-spacing: normal;
+    word-break: break-word;
+}
+
+@media only screen and (max-width: 600px) {
+    .light-content-block {
+        padding: 2rem;
+    }
+}

@@ -1,0 +1,253 @@
+:root {
+    --main-bg-color: rgb(39, 39, 39);
+    --gray-gradient: linear-gradient(rgb(38, 38, 38), rgb(60,60,60));
+    --contrast-color-1: rgb(0, 194, 203); 
+    --contrast-color-2: rgb(83, 89, 193);
+    --contrast-color-3: rgb(83, 89, 193); 
+    --hover-color: rgb(31, 115, 189);
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: rgb(39, 39, 39);
+}
+.page-title {
+    background-image: url("../media/mainBg-01.svg"); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#all-publications {
+    background: var(--main-bg-color);
+    padding: 1rem;
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.horizontal-card {
+    background: rgb(255, 255, 255);
+    display: flex;
+    margin: 3rem auto;
+    height: auto;
+    position: relative;
+    top: 0;
+    padding-bottom: 3.5rem;
+    width: 99%;
+    word-wrap: break-word;
+}
+#publications-navigation {
+    height: 100%;
+    width: auto;
+    transition: all 0.5s;
+    right: 2rem; 
+    z-index: 10;
+    top: 0;
+    position: sticky;
+}
+.cards-only {
+    width: 50%;
+}
+.years-navigation {
+    overflow-y: scroll;
+    height: 100vh;
+}
+#publications-navigation a {
+    color: rgb(235, 233, 233);
+    padding: 1rem;
+    display: block;
+    font-size: larger;
+    /* overflow-y: scroll; */
+    text-decoration: none;
+    transition: all 0.25s;
+    text-align: center;
+
+}
+
+#publications-navigation a:hover {
+    color: rgb(255, 254, 254);
+    background-color: rgb(143, 123, 255);
+}
+
+#publications-navigation h2 {
+    color: rgb(253, 253, 253);
+    letter-spacing: normal;
+ 
+}
+.publication-links {
+    margin: 1rem;
+}
+.publication-links a{
+    color: rgb(74, 47, 226);
+    font-size: large;
+    text-decoration: none;
+}
+
+.horizontal-card p {
+    color: black;
+    margin: 0 1rem;
+}
+.publication-footer a, .publication-footer p {
+    font-size: 1.5rem;  
+    margin: 1rem;
+    color: white;
+}
+.card-top-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+.card-text-section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    width: 59%;
+}
+.new-banner {
+  
+    color: rgb(74, 47, 226);
+    margin: 1rem 1rem 0 1rem;
+}
+.publication-image {
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+.odd {
+    flex-direction: row-reverse;
+}
+.publication-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.publication p {
+    color: black; 
+    margin: 0 1rem;
+}
+
+.publication-footer {
+    background: rgb(58, 59, 189);
+    height: 3.5rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#entry-page-publications {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.get-pdf {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    /* text-align: center; */
+    transition: all 0.5s;
+    /* float: right; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.get-pdf:hover{
+    transform: scale(1.05);
+}
+.year-divider-container {
+    position: relative;
+    width: 100%;
+}
+.year-divider {
+    text-align: center;
+    width: 100%;
+
+}
+.year-divider-sticky {
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+    background: rgb(39, 39, 39);
+    position: sticky; 
+    padding: 1px;
+    top: 0;
+}
+.year-divider-content {
+    display: inline-block;
+    margin: 0;
+}
+.dropdown-navigation {
+    display: none;
+}
+.dropdown-navigation-content {
+    display: none;
+}
+
+@media only screen and (max-width:800px) {
+    .page-title {
+        padding-left: 2rem;
+    }
+    .card-text-section {
+        width: 100%;
+    }
+    #publications-navigation, .year-divider-sticky {
+        padding-top: 2rem;
+        top: 0;
+    }
+    .dropdown-navigation {
+        display: inline-block;
+    }
+    #publications-navigation {
+        display: none;
+    }
+    input {
+        -webkit-appearance: none;
+        border: 10px solid transparent;
+        border-left: 15px solid white;
+        content: "";
+        display: inline-block;
+        transform: rotate(90deg);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 0;
+    }
+    input:hover {
+        border: 11px solid transparent;
+        border-left: 16px solid var(--hover-color);
+    }
+    .dropdown-navigation-content {
+        display: block;
+        max-height: 0px;
+        overflow: scroll;
+        margin-bottom: 1rem;
+        z-index: 100;
+        background: var(--main-bg-color);
+        transition: all 0.3s ease;
+
+    }
+    .dropdown-navigation-content a {
+        text-decoration: none;
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        transition: all 0.5s ease;
+        color: rgb(172, 172, 172);
+        letter-spacing: 0.5rem;
+    }
+    .dropdown-navigation:checked ~ .dropdown-navigation-content{
+        max-height:500px;
+    }
+   
+    .dropdown-navigation-content a:hover {
+        color: var(--hover-color);
+        font-size: 1.75rem; 
+    }
+    .cards-only {
+        width: 90%;
+    }
+    
+
+}

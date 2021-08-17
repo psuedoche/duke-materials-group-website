@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Page</title>
+        <!-- CSS -->
+        <link rel = "styleSheet" href="css/styles.css">
+        <link rel = "styleSheet" href="css/about.css">
+        <script type = "text/javascript" src = "js/open_positions.js"></script>
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <div class = "menu-bar"></div><div class = "menu-bar"></div>
+            <div class = "menu-bar"></div>
+        </label>
+        <div id ="top-menu"></div>
+        <div class = "page-title">
+            <h1>ABOUT US</h1>
+        </div>
+        <div class = "full-page-content-container">
+            <div class="light-content-block">
+                <h1 class = "subtitle">Our Mission</h1>
+                <p class = "content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <h1 class = "subtitle">Our Goals</h1>
+                <p class = "content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <h1 class = "subtitle">Our Collaborators</h1>
+                <p class = "content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <h1 class = "subtitle">Open Positions</h1>
+                <div id = "all-open-positions"></div>
+
+                <script>
+                    let positions_html = '';
+                    for(i in open_positions) {
+                        var position = open_positions[i]
+                        positions_html += '<div class = "content-text">' + 
+                            '<h2>' + i + '</h2>';
+                        // the fields of the open position 
+                        for(j in position) {
+                            positions_html += '<br><h3>' + j + ':</h3>'+  
+                            ((j==='link')?
+                                // link formatting 
+                                ("<a target= '_blank' href ='" + position[j] + "'>" + position[j] +"<a>"):
+                                // other formatting
+                                ('<p>' + position[j] + '</p>'));
+                        }
+                    }
+                    document.getElementById('all-open-positions').innerHTML = positions_html; 
+                </script>
+            </div>
+            
+        </div>
+        <footer id = "footer"></footer>
+        <!-- JS -->
+       
+
+        <script type = "text/javascript" src = "js/main.js"></script>
+    </body>
+</html>
