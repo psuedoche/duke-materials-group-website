@@ -1,3 +1,2 @@
-### This is website for material group in Duke university
+#Group Website for the Center of Autonomous Materials Design at Duke University
 
-# main developer is Cheryl Li
