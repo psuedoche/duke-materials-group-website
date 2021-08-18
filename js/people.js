@@ -48,7 +48,10 @@ let alumni = [
         "allison-stelling",
         "luis-agapito"
     ];
-
+let cv = '<i class="ai ai-cv-square ai-2x ai-inverse"></i>';
+let gScholar = '<i class="ai ai-google-scholar-square ai-2x ai-inverse"></i>';
+let orcid = '<i class="ai ai-orcid-square ai-2x ai-inverse"></i>'; 
+let publons = '<i class="ai ai-publons-square ai-2x ai-inverse"></i>'; 
 function buildProfiles(data) {
     let people_html = '<div class = "current-people">'; 
     let alumni_html = '<div class = "alumni"><h1>ALUMNI</h1>' ;
@@ -69,6 +72,12 @@ function buildProfiles(data) {
             people_html += '</div>' + 
             '<div class = "contact-info">' + 
                 '<p>' + data[person].contact + '</p>' + 
+            '</div>' + 
+            '<div class = >' + 
+                ((data[person].cv)?('<a target = "_blank" href = "' + data[person].cv + '">' + cv + '</a>'):'') +
+                ((data[person].gscholar)?('<a target = "_blank" href = "https://scholar.google.com/citations?user=' + data[person].gscholar + '">' + gScholar +'</a>'):'') + 
+                ((data[person].orcid)?('<a target = "_blank" href = "https://orcid.org/' + data[person].orcid + '">' + orcid + '</a>'):'') + 
+                ((data[person].publons)?('<a target = "_blank" href = "https://publons.com/researcher/' + data[person].publons + '">' + publons + '</a>'):'') + 
             '</div>' + 
         '</div>'; 
     });

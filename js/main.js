@@ -23,8 +23,8 @@ let menu =
 "<div class = 'menu-item'>" +
   "<a href='contact.html'>Contact</a>" +
 "</div>"; 
-document.getElementById("top-menu").innerHTML = menu; 
-document.getElementById("mobile-menu").innerHTML = menu; 
+document.getElementById("top-menu").innerHTML = menu;
+document.getElementById("top-menu").insertAdjacentHTML('beforebegin', '<div id = "mobile-menu">' + menu + '</div>')
 
 
 
@@ -65,6 +65,6 @@ let footer = '<a href = ""><img src = "media/logo.svg"></a>' +
 
 '<p>Duke University, 144 Hudson Hall, Box 90300, Durham NC 27708</p><br>' +
 
-'<a href = "contact" class = "nav-btn">Contact Us</a>'; 
+'<a href = "contact.html" class = "nav-btn">Contact Us</a>'; 
 
 document.getElementById("footer").innerHTML = footer; 

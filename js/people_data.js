@@ -7,7 +7,9 @@ let people_data = {
         ],
         current: "",
         contact: "stefano@duke.edu",
-        
+        cv: "http://materials.duke.edu/auro/cv.pdf",
+        gscholar: "zuFUb-YAAAAJ",
+        orcid: "0000-0003-0570-8238", 
     },
     "manuela-damian" : {
         name: "Manuela Damian",
@@ -35,7 +37,8 @@ let people_data = {
         ],
         current: "",
         contact: "cormac.toher@duke.edu",
-   
+        gscholar: "BfiQq-4AAAAJ",
+        orcid: "0000-0001-7073-8690", 
     },
     "frisco-rose" : {
         name: "Frisco Rose",
@@ -45,7 +48,8 @@ let people_data = {
         ],
         current: "",
         contact: "frisco.rose@duke.edu",
-   
+        gscholar: "", 
+
     },
     "hagen-eckert" : {
         name: "Hagen Eckert",
@@ -54,7 +58,9 @@ let people_data = {
         ],
         current: "Chancellor of Germany",
         contact: "hagen.eckert@duke.edu",
-        
+        gscholar: "sgdimZ4AAAAJ", 
+        orcid: "0000-0003-4771-1435", 
+        publons: "2769588/hagen-eckert/",
         
     },
     "marco-esters" : {
@@ -64,6 +70,8 @@ let people_data = {
         ],
         current: "",
         contact: "marco.esters@duke.edu",
+        gscholar: "sJLfGh0AAAAJ", 
+        orcid: "0000-0002-8793-2200", 
     },
     "david-hicks" : {
         name: "David Hicks",
@@ -72,6 +80,8 @@ let people_data = {
         ],
         current: "",
         contact: "david.hicks@duke.edu",
+        gscholar: "G6udP48AAAAJ", 
+        orcid: "0000-0001-5813-6785", 
     },
     "corey-oses" : {
         name: "Corey Oses",
@@ -80,6 +90,9 @@ let people_data = {
         ],
         current: "",
         contact: "corey.oses@duke.edu",
+        cv: "https://coreyoses.com/",
+        gscholar: "Za7m4CMAAAAJ", 
+        orcid: "0000-0002-3790-1377", 
     },
     "andriy-smolyanyuk" : {
         name: "Andriy Smolyanyuk",
@@ -88,6 +101,8 @@ let people_data = {
         ],
         current: "",
         contact: "andriy.smolyanyuk@duke.edu",
+        gscholar: "", 
+        orcid: "0000-0002-4859-5977", 
     },
     "simon-divilov" : {
         name: "Simon Divilov",
@@ -96,6 +111,8 @@ let people_data = {
         ],
         current: "",
         contact: "simon.divilov@duke.edu",
+        gscholar: "9LEcBjoAAAAJ", 
+        orcid: "", 
     },
     "ohad-levy" : {
         name: "Ohad Levy",
@@ -103,7 +120,7 @@ let people_data = {
             "Visiting Professor"
         ],
         current: "",
-        contact: "@duke.edu",
+        contact: "",
         
     },
     "yoav-lederer" : {
@@ -112,7 +129,7 @@ let people_data = {
             "Visiting Researcher"
         ],
         current: "",
-        contact: "@duke.edu",
+        contact: "",
         
     },
     "cheryl-li" : {
