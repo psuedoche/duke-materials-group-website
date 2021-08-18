@@ -20,7 +20,7 @@ function buildSlides(slide_data) {
           slide_data[slide].content +
         '</p>';  
     if(slide_data[slide].nav_link) {
-      slideShow += '<a href = "' + slide_data[slide].nav_link +
+      slideShow += '<a target = "__blank" href = "' + slide_data[slide].nav_link +
       '" type = "button" class = "nav-btn second-btn">Learn More &#10095;</a><br>';
     }
       slideShow += '</div>' + 

@@ -25,6 +25,11 @@
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
+  margin: 0 0.5rem; 
+  transition: all 1s ease;
+}
+.ai:hover {
+  color: rgb(9, 63, 110);
 }
 .ai-academia:before {
   content: "\e9af";
@@ -459,7 +464,7 @@
 .ai-7x {
   font-size: 7em;
 }
-.ai-8x {left
+.ai-8x {
   font-size: 8em;
 }
 .ai-9x {
@@ -531,5 +536,5 @@ border-radius: .1em;
   font-size: 2em;
 }
 .ai-inverse {
-  color: #fff;
+  color: rgb(90, 120, 253);
 }

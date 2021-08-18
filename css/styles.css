@@ -140,6 +140,10 @@ p {
     background: rgb(230, 226, 226);
 }
 
+.subtitle {
+    color: #5271FF;
+}
+
 footer {
     background: rgb(32, 32, 32);
     min-height: 10rem;

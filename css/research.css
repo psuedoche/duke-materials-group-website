@@ -13,6 +13,8 @@
     background-color: white;
     box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
     padding:2em;
+    line-height: 2rem;
+    font-weight: 200;
 }
 
 details {
@@ -25,11 +27,11 @@ details {
 }
 
 details:not([open]) {
-    max-height: 6rem;
+    max-height: 10rem;
 }
 
 details[open] {
-    max-height: 50rem;
+    max-height: 100rem;
 }
 
 details:nth-child(3n + 1) > summary {
@@ -74,4 +76,8 @@ summary h1 {
     color: white;
     display: inline-block;
     margin: 0;
+}
+
+.acordion-content a {
+    color: rgb(83, 89, 193);
 }
