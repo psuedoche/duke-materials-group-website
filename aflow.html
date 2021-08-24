@@ -6,15 +6,18 @@
         <link rel = "styleSheet" href="css/styles.css">
         <link rel = "styleSheet" href="css/aflow.css">
         <meta name="viewport" content="width=device-width">
-
-        
     </head>
     <body>
+        <div id = "mobile-sticky-header"></div>  
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">
-            <div class = "menu-bar"></div><div class = "menu-bar"></div>
-            <div class = "menu-bar"></div>
+            <div id = "menu-bars">
+                <div class = "menu-bar"></div>
+                <div class = "menu-bar"></div>
+                <div class = "menu-bar"></div>
+            </div>
         </label>
+        <a href = 'index.html' id = "mobile-header-logo"><img src = 'media/logo.svg'></a>
         <div id ="top-menu">
         </div>
         <div class = "page-title"><h1>AFLOW</h1></div>
@@ -25,7 +28,7 @@
                     The Automatic FLOW for Materials Discovery (AFLOW) software is a framework for autonomous density functional theory and materials properties calculations developed in our group. AFLOW has been used to create the largest materials database in the word with millions of materials entries. Our database is publicly available through the <a target = "_blank" href = "http://aflow.org">AFLOW website</a>, and searchable using our <a target = "_blank" href = "http://aflow.org/search/">search page</a> and <a target = "_blank" href = "http://aflow.org/API/aflux/">search API</a>.
                 </p>
                 <p class = "content-text">
-                    AFLOW provides a variety of tools and modules to analyze structures and predict materials properties, including autonomous error corrections for density functional theory calculations (using <a target = "_blank" href = "https://vasp.at/">VASP</a>), accurate crystal symmetry packages and structure prototyping, thermodynamic stability analysis, modeling of chemically disordered materials, and calculating a variety of electronic, thermal, and mechanical properties. For more information on our research, please visit our <a target = "_blank" href = "research.html">research</a> and <a target = "_blank" href = "publications.html">publications</a> pages.
+                    AFLOW provides a variety of tools and modules to analyze structures and predict materials properties, including autonomous error corrections for density functional theory calculations (using <a target = "_blank" href = "https://vasp.at/">VASP</a>), accurate crystal symmetry packages and structure prototyping, thermodynamic stability analysis, modeling of chemically disordered materials, and calculating a variety of electronic, thermal, and mechanical properties. For more information on our research, please visit our <a href = "research.html">research</a> and <a href = "publications.html">publications</a> pages.
                 </p>
                 <p class = "content-text">
                     AFLOW is open source and designed to run on Linux, but can be run on MacOS and Windows (with additional software). It can be compiled from <a target = "_blank" href = "http://materials.duke.edu/auro/aflow3.tar.xz">source</a> or installed using our <a target = "_blank" href = "http://aflow.org/install-aflow/
@@ -35,10 +38,8 @@
                     We periodically conduct <a target = "_blank" href = "http://aflow.org/aflow-school/">AFLOW Schools</a> where we teach a variety of AFLOW’s features. The videos and slides of these workshops are publicly available to be used for reference and tutorials. Upcoming AFLOW Schools are announced on our <a target = "_blank" href = "http://aflow.org/seminars/">seminars page</a>.
                 </p>
                 <div class = "buttons-container">
-                    <a href = "https://aflow.org" target="_blank" class = "nav-btn second-btn">Visit AFLOW.org &#10095;</a>
+                    <a href = "http://aflow.org" target="_blank" class = "nav-btn second-btn">Visit AFLOW.org &#10095;</a>
                 </div>
-
-
             </div>
         </div>   
         <footer id = "footer"></footer>

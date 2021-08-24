@@ -1,85 +1,86 @@
 :root {
     --main-bg-color: rgb(39, 39, 39);
-    --gray-gradient: linear-gradient(rgb(38, 38, 38), rgb(60,60,60));
-    --contrast-color-1: rgb(0, 194, 203); 
-    --contrast-color-2: rgb(83, 89, 193);
-    --contrast-color-3: rgb(83, 89, 193); 
-    --hover-color: rgb(31, 115, 189);
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
-    background: rgb(39, 39, 39);
+    background: var(--main-bg-color);
 }
+
 .page-title {
+    background-attachment: fixed;
     background-image: url("../media/mainBg-01.svg"); 
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
 }
 
 #all-publications {
     background: var(--main-bg-color);
-    padding: 1rem;
     display: none;
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 1rem;
 }
+
 .horizontal-card {
-    background: rgb(255, 255, 255);
+    background: white;
     display: flex;
-    margin: 3rem auto;
     height: auto;
+    margin: 3rem auto;
+    padding-bottom: 3.5rem;
     position: relative;
     top: 0;
-    padding-bottom: 3.5rem;
     width: 99%;
     word-wrap: break-word;
 }
+
 #publications-navigation {
     height: 100%;
-    width: auto;
-    transition: all 0.5s;
-    right: 2rem; 
-    z-index: 10;
-    top: 0;
     position: sticky;
+    right: 2rem; 
+    top: 0;
+    transition: all 0.5s;
+    width: auto;
+    z-index: 10;
 }
+
 .cards-only {
     width: 50%;
 }
+
 .years-navigation {
     overflow-y: scroll;
     height: 100vh;
 }
+
 #publications-navigation a {
     color: rgb(235, 233, 233);
-    padding: 1rem;
     display: block;
     font-size: larger;
-    /* overflow-y: scroll; */
+    padding: 1rem;
+    text-align: center;
     text-decoration: none;
     transition: all 0.25s;
-    text-align: center;
-
 }
 
 #publications-navigation a:hover {
-    color: rgb(255, 254, 254);
-    background-color: rgb(143, 123, 255);
+    background-color: var(--contrast-color-3);
 }
 
 #publications-navigation h2 {
-    color: rgb(253, 253, 253);
+    color: white;
     letter-spacing: normal;
- 
 }
+
 .publication-links {
     margin: 1rem;
 }
+
 .publication-links a{
-    color: rgb(74, 47, 226);
+    color: var(--contrast-color-3);
     font-size: large;
     text-decoration: none;
 }
@@ -88,39 +89,48 @@ body {
     color: black;
     margin: 0 1rem;
 }
+
 .publication-footer a, .publication-footer p {
+    color: white;
     font-size: 1.5rem;  
     margin: 1rem;
-    color: white;
 }
+
 .card-top-section {
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
 }
+
 .card-text-section {
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
     width: 59%;
 }
+
 .new-banner {
-  
-    color: rgb(74, 47, 226);
+    color: var(--contrast-color-3);
     margin: 1rem 1rem 0 1rem;
 }
+
 .publication-image {
-    width: 40%;
-    height: 100%;
+    align-items: center;
+    background: #695ccd; 
+    display: flex;
     float: right;
+    height: 100%;
+    width: 40%;
 }
+
 .odd {
     flex-direction: row-reverse;
 }
+
 .publication-image img {
+    align-self: center;
     width: 100%;
-    height: 100%;
 }
 
 .publication p {
@@ -129,7 +139,7 @@ body {
 }
 
 .publication-footer {
-    background: rgb(58, 59, 189);
+    background: var(--contrast-color-2);
     height: 3.5rem;
     width: 100%;
     position: absolute;
@@ -137,106 +147,154 @@ body {
 }
 
 #entry-page-publications {
-    max-width: 1000px;
-    margin: auto;
     display: flex;
     flex-direction: column;
+    margin: auto;
+    max-width: 1000px;
 }
 
 .get-pdf {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    /* text-align: center; */
-    transition: all 0.5s;
-    /* float: right; */
+    bottom: 0;
+    color: white;
     position: absolute;
     right: 0;
-    bottom: 0;
+    text-decoration: none;
+    transition: all 0.5s;
 }
 
 .get-pdf:hover{
     transform: scale(1.05);
 }
+
 .year-divider-container {
     position: relative;
     width: 100%;
 }
+
 .year-divider {
     text-align: center;
     width: 100%;
-
 }
+
 .year-divider-sticky {
+    background: var(--main-bg-color);
+    padding: 1px;
+    position: sticky; 
     text-align: center;
+    top: 0;
     width: 100%;
     z-index: 1;
-    background: rgb(39, 39, 39);
-    position: sticky; 
-    padding: 1px;
-    top: 0;
 }
+
 .year-divider-content {
     display: inline-block;
     margin: 1rem;
 }
+
 .dropdown-navigation {
     display: none;
 }
+
 .dropdown-navigation-content {
     display: none;
 }
 
+#back-to-top {
+    background-color:var(--contrast-color-1);
+    border-radius: 4px;
+    bottom: 1rem;
+    display: inline-block;
+    height: 3rem;
+    opacity: 0;
+    position: fixed;
+    right: 1rem;
+    text-align: center;
+    transition: all .5s;
+    visibility: hidden;
+    width: 3rem;
+    z-index: 1000;
+}
+
+#back-to-top::after {
+    border: 10px solid transparent;
+    border-left: 15px solid white;
+    content: "";
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transform: rotate(-90deg);
+    transition: all 0.3s ease;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+  
 @media only screen and (max-width:800px) {
     .page-title {
         padding-left: 2rem;
     }
+
     .card-text-section {
         width: 100%;
     }
+
     #publications-navigation, .year-divider-sticky {
         padding-top: 2rem;
         top: 0;
     }
+
     .dropdown-navigation {
         display: inline-block;
     }
+
     #publications-navigation {
         display: none;
     }
+
     input {
         -webkit-appearance: none;
         border: 10px solid transparent;
         border-left: 15px solid white;
         content: "";
-        display: inline-block;
-        transform: rotate(90deg);
         cursor: pointer;
-        transition: all 0.3s ease;
+        display: inline-block;
         margin: 0;
+        transform: rotate(90deg);
+        transition: all 0.3s ease;
     }
+    
     input:hover {
         border: 11px solid transparent;
         border-left: 16px solid var(--hover-color);
     }
+
     .dropdown-navigation-content {
+        background: var(--main-bg-color);
         display: block;
+        margin-bottom: 1rem;
         max-height: 0px;
         overflow: scroll;
-        margin-bottom: 1rem;
-        z-index: 100;
-        background: var(--main-bg-color);
         transition: all 0.3s ease;
+        z-index: 1000;
+    }
 
-    }
     .dropdown-navigation-content a {
-        text-decoration: none;
-        font-style: italic;
-        font-size: 1.5rem;
-        line-height: 2rem;
-        transition: all 0.5s ease;
         color: rgb(172, 172, 172);
+        font-size: 1.5rem;
+        font-style: italic;
         letter-spacing: 0.5rem;
+        line-height: 2rem;
+        text-decoration: none;
+        transition: all 0.5s ease;
     }
+
     .dropdown-navigation:checked ~ .dropdown-navigation-content{
         max-height:500px;
     }
@@ -245,11 +303,22 @@ body {
         color: var(--hover-color);
         font-size: 1.75rem; 
     }
+
     .cards-only {
         width: 90%;
     }
+
     .year-divider-content {
         margin: 0;
     }
+}
 
+@media only screen and (max-width:600px) {
+    .year-divider-sticky {
+        top: 3rem;
+    }
+
+    .publication-image {
+        display: none;
+    }
 }

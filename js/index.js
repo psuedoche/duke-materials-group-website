@@ -1,12 +1,36 @@
+// All Homepage JS
 // Display open positions
 function displayPositions() {
+  var positions = Object.keys(open_positions); // object declared in open_positions.js
+  var homepage_positions = document.getElementById('open-positions'); 
+  var content = '<h1>OPEN POSITIONS</h1><p> The Curtarolo Materials Group currently has open '; 
   // if open positions object is empty, do not display open positions message
-  if (Object.keys(open_positions).length == 0) {
-    document.getElementById('open-positions').style.display = 'none';
+  if (positions.length == 0) {
+    homepage_positions.style.display = 'none';
+    return; 
   }
+  // string formatting for types of open positions
+  else if (positions.length == 1) {
+    content += positions[0]; 
+  }
+  else if (positions.length == 2) {
+    content += positions[0] + ' and ' + positions[1];
+  }
+  else {
+    for(p in positions) {
+      if(p == positions.length - 1) {
+        content += ' and ' + positions[p]; 
+      }
+      else {
+        content += positions[p] + ', '; 
+      }
+    }
+  }
+  content += ' positions.</p>'; 
+  homepage_positions.insertAdjacentHTML('afterbegin', content); 
 }
-
-// Dynamically build slides
+         
+// Dynamically build slideshow
 function buildSlides(slide_data) {
   var slideShow = "";
   for(slide in slide_data) {
@@ -26,17 +50,14 @@ function buildSlides(slide_data) {
       slideShow += '</div>' + 
     '</div>';
   }
-
   document.getElementById('slideshow-container').insertAdjacentHTML('afterbegin', slideShow);
 }
 
 let slideIndex = 1;
-
 // Next/previous controls
 function changeSlideBy(n) {
   showSlide(slideIndex += n);
 }
-
 // Thumbnail image controls
 function jumpToSlide(n) {
   showSlide(slideIndex = n);
@@ -166,7 +187,6 @@ function showPublications(publications) {
     } 
     i++; 
   }
- 
   document.getElementById("entry-page-publications").innerHTML = publications_cards;
 }
 

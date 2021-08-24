@@ -1,21 +1,26 @@
-.full-page-content-container a {
+.full-page-content-container a, .light-content-block h1 {
     color: var(--contrast-color-3);
 }
-.light-content-block h1 {
-    color: #5271FF;
-}
+
 .light-content-block {
     padding: 3rem 5rem; 
     width: 100vw;
 }
+
 .content-text {
+    line-height: 2rem;
     margin: 2rem 0;
     max-width: 1500px;
 }
-#all-open-positions h3, #all-open-positions p, h2,a{
-    margin: 0 0.5rem;
+
+li {
+    line-height: 2rem;
+}
+
+#all-open-positions h3, #all-open-positions p, h2, a {
     display: inline-block;
     letter-spacing: normal;
+    margin: 0.5rem;
     word-break: break-word;
 }
 

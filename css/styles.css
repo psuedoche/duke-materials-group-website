@@ -3,7 +3,7 @@
     --main-bg-color: rgb(65, 65, 65);
     --gray-gradient: linear-gradient(rgb(38, 38, 38), rgb(60,60,60));
     --contrast-color-1: rgb(0, 194, 203); 
-    --contrast-color-2: rgb(83, 89, 193);
+    --contrast-color-2: rgb(69, 75, 175);
     --contrast-color-3: rgb(83, 89, 193); 
     --hover-color: rgb(31, 115, 189);
 }
@@ -21,7 +21,7 @@ body {
 }
 
 h1, h2, h3, h4,
-.nav-btn, p, a, .nav-arrow{
+.nav-btn, p, a, li{
     color: white;
     font-family: Helvetica, sans-serif;
 }
@@ -30,7 +30,7 @@ h1, h2, h3 {
     letter-spacing: 0.25em;
 }
 
-p {
+p, li {
     font-size: large;
 }
 
@@ -39,8 +39,13 @@ p {
 .light-content-block h2, 
 .light-content-block h3, 
 .light-content-block p, 
+.light-content-block li,
 .nav-arrow {
     color: black;
+}
+
+.light-content-block a {
+    margin: 0;
 }
 
 /* NAVIGATION */ 
@@ -168,6 +173,7 @@ footer p {
 
 /* HOME PAGE STYLES */
 .entry-container {
+    animation: fade-in 3s;
     display: flex;
     flex-direction: column;
     height: auto;
@@ -378,8 +384,11 @@ footer p {
 .research-card h2 {
     text-align: center;
     font-weight: 400;
+    height: 4rem;
 }
-
+.research-card p {
+    height: 6rem;
+}
 .research-card div {
     display: flex;
     justify-content: center;
@@ -391,6 +400,7 @@ footer p {
 		transform: rotate(360deg);
 	}
 }
+
 .loading-spinner {
     animation: spinner 900ms linear infinite;
     background: rgba(0, 0, 0, 0.2);
@@ -410,16 +420,19 @@ footer p {
 }
 
 .horizontal-card h1 {
-    color: rgb(49, 52, 116);
+    color: var(--contrast-color-2);
     margin: 1rem;
     letter-spacing: normal;
 }
+
 #mobile-header-logo {
     display: none;
 }
+
 #menu-toggle {
     display: none;
 }
+
 /* MOBILE */
 @media only screen and (max-width: 600px) {
     body {
@@ -427,51 +440,56 @@ footer p {
         background-repeat: no-repeat;
         background-attachment: fixed;
     }
-    h1, h2{
+
+    h1, h2 {
         letter-spacing: 0.2rem;
     }
+
     .menu-bar {
-        width: 20px;
-        height: 3px;
         background-color: white;
+        height: 3px;
         margin: 5px 0;
+        width: 20px;
     }
+
     #menu-bars {
         display: inline-block;
         margin-right: 1rem;
     }
+
     #top-menu {
         display: none;
     }
   
-    
     #mobile-sticky-header {
-        width: 100%;
+        background: var(--gray-gradient);
+        height: 70px;
         position: fixed;
         top: 0;
-        height: 70px;
+        width: 100%;
         z-index: 10;
-        background: var(--gray-gradient);
     }
+
     .menu-icon, #mobile-header-logo {
+        left: 1rem;
         position: fixed;
         top: 1rem;
-        left: 1rem;
-        z-index: 100;
         transition: all 800ms ease-in-out;
+        z-index: 100;
     }
+
     #mobile-header-logo {
         display: inline-block;
-        width: 100px;
         left: 3rem;
+        width: 100px;
     }
-    #mobile-menu  {
-        left: -100vw;
 
+    #mobile-menu  {
         display: block;
-        width: 70%;
         height: 100%;
+        left: -100vw;
         transition: all 800ms ease-in-out;
+        width: 70%;
     }
 
     #menu-toggle:checked ~ #mobile-menu {
@@ -481,47 +499,59 @@ footer p {
     #menu-toggle:checked + .menu-icon{
         left: 75%;
     }
+
     #menu-toggle:checked ~ #mobile-header-logo{
         animation: fade-out 1s ease;
     }
-  
+
     .entry-container {
+        justify-content: start;
         margin: 2rem 1rem 0 3rem;
         row-gap: 2rem;
-        justify-content: start;
-    } 
+    }
+
     #entry-buttons {
         justify-content: start;
     }
+
     #entry-buttons a {
         padding: 1rem 4rem 1rem 1rem;
         width: 200px;
     }
+
     .content-container {
         padding: 3rem;
     }
+
     .light-content-block {
         padding: 2rem;
     }
+
     #slideshow-container {
         margin: 0;
     }
+
     .slide {
         height: auto;
         width: auto;
     }
+
     .nav-btn {
         padding: 1rem 4rem 1rem 1rem;
     }
+
     .publication-image {
         display: none;
     }
+
     .card-text-section {
         width: 100%;
     }
+
     #footer a {
         padding: 1rem 3rem;
     }
+    
     .publication-image img {
         display: none;
     }

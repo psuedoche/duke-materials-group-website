@@ -9,11 +9,16 @@
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
+        <div id = "mobile-sticky-header"></div>  
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">
-            <div class = "menu-bar"></div><div class = "menu-bar"></div>
-            <div class = "menu-bar"></div>
+            <div id = "menu-bars">
+                <div class = "menu-bar"></div>
+                <div class = "menu-bar"></div>
+                <div class = "menu-bar"></div>
+            </div>
         </label>
+        <a href = 'index.html' id = "mobile-header-logo"><img src = 'media/logo.svg'></a>
         <div id ="top-menu"></div>
         <div class = "page-title">
             <h1>ABOUT US</h1>
@@ -22,17 +27,17 @@
             <div class="light-content-block">
                 <h1 class = "subtitle">Our Research Group</h1>
                 <p class = "content-text">
-                    The Curtarolo group is a computational materials science group in the Department Mechanical Engineering and Materials Science and the Center for Autonomous Materials Design at Duke University. Our <a target = "_blank" href = "research_html">research</a> focuses on the autonomous discovery of new materials with desired properties, the development of synthesizability descriptors, and the description of disordered systems. To achieve our goal, we develop and employ the <a target = "_blank" href = "aflow.html">AFLOW</a> software suite. The generated data is publicly available in the <a target = "_blank" href = "http://aflow.org/">AFLOW database,</a>the largest of its kind with over 3.5 million entries. Our work is regularly<a target = "_blank" href = "publications.html">published</a>in high-quality, peer-reviewed journals.
+                    The Curtarolo group is a computational materials science group in the Department Mechanical Engineering and Materials Science and the Center for Autonomous Materials Design at Duke University. Our <a href = "research.html">research</a> focuses on the autonomous discovery of new materials with desired properties, the development of synthesizability descriptors, and the description of disordered systems. To achieve our goal, we develop and employ the <a href = "aflow.html">AFLOW</a> software suite. The generated data is publicly available in the <a target = "_blank" href = "http://aflow.org/">AFLOW database,</a> the largest of its kind with over 3.5 million entries. Our work is regularly <a href = "publications.html">published</a> in high-quality, peer-reviewed journals.
                 </p>
                 <p class = "content-text">
-                    Our group is organized in the<a target = "_blank" href = "http://aflow.org/consortium/">AFLOW Consortium</a>and is sponsored by the <a target = "_blank" href = "https://www.nsf.gov/">National Science Foundation</a> and the<a target = "_blank" href = "https://www.arl.army.mil/business/muri/">Multi University Research Initiative (MURI)</a>of the United States Department of Defense.
+                    Our group is organized in the <a target = "_blank" href = "http://aflow.org/consortium/">AFLOW Consortium</a> and is sponsored by the <a target = "_blank" href = "https://www.nsf.gov/">National Science Foundation</a> and the <a target = "_blank" href = "https://www.arl.army.mil/business/muri/">Multi University Research Initiative (MURI)</a> of the United States Department of Defense.
                 </p>
                 <h1 class = "subtitle">Our Outreach Activities</h1>
                 <p class = "content-text">
                     We believe that research should be transparent and accessible to everyone. This is not only reflected in the open source nature of our software and the availability of our data, but also in our outreach activities. We regularly host AFLOW Schools to teach the use of the AFLOW software, our main research tool. Workshop videos and slides are publicly available on the <a target = "_blank" href = "http://aflow.org/aflow-school/">AFLOW website</a>.
                 </p>
                 <p class = "content-text">
-                    In an effort to make high-quality research accessible to everyone, we launched a<a target = "_blank" href = " http://aflow.org/seminars/">virtual seminar series</a>with speakers covering a diverse range of topics in computational and experimental materials science. Participation is open to everyone and free of charge.
+                    In an effort to make high-quality research accessible to everyone, we launched a <a target = "_blank" href = " http://aflow.org/seminars/">virtual seminar series</a> with speakers covering a diverse range of topics in computational and experimental materials science. Participation is open to everyone and free of charge.
                 </p>
                 <h1 class = "subtitle">Available Positions</h1>
                 <p class = "content-text">
@@ -49,24 +54,25 @@
                         positions_html += '<div class = "content-text">' + 
                             '<h2>' + i + '</h2>';
                         // the fields of the open position 
-                        for(j in position) {
-                            positions_html += '<br><h3>' + j + ':</h3>'+  
-                            ((j==='link')?
-                                // link formatting 
-                                ("<a target= '_blank' href ='" + position[j] + "'>" + position[j] +"<a>"):
-                                // other formatting
-                                ('<p>' + position[j] + '</p>'));
-                        }
+                        positions_html += '<br><h3>Description:</h3>' + 
+                            '<p class = "context-text">' + 
+                                position.description + 
+                            '</p>' + 
+                        '<h3>Requirements</h3><ul>'; 
+                        position.requirements.forEach(req => {
+                            positions_html += '<li>' + req + '</li>'; 
+                        });
+                        positions_html += '</ul>' + 
+                        '<h3>Link: </h3>' +
+                            '<a href = "' + position.link + '">' + position.link + '</a>' +
+                        '</div>'; 
                     }
                     document.getElementById('all-open-positions').innerHTML = positions_html; 
                 </script>
-            </div>
-            
+            </div> 
         </div>
         <footer id = "footer"></footer>
         <!-- JS -->
-       
-
         <script type = "text/javascript" src = "js/main.js"></script>
     </body>
 </html>

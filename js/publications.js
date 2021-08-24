@@ -3,9 +3,22 @@ function closeDropdown() {
     for(i in dropdown_navigation) {
         dropdown_navigation[i].checked = false;
     }
-    
 }
+
 function showPublications(publications) {
+    var backToTop = document.getElementById("back-to-top");  
+    window.addEventListener('scroll', function(){
+        const scroll = window.pageYOffset; 
+        if(scroll > 300) {
+            backToTop.classList.add('show'); 
+        }
+        else {
+            backToTop.classList.remove('show');
+        }
+    })
+    backToTop.addEventListener('click', function() {
+        window.scrollTo(0,0); 
+    });
     var publications_cards = '<div class = "cards-only">';
     let years = [];
     var current_year = 0; 
@@ -15,16 +28,11 @@ function showPublications(publications) {
         if(publications[i].year != current_year) {
             years.push(publications[i].year);
             publications_cards += 
-
                     '<div class = "year-divider">' +
-                        
                         '<a class = "year-divider-content" id = "publications-year-' + publications[i].year +'"></a>' +
-                        
                     '</div>' +
                     '<div class = "year-divider-sticky">' +
-                        
                         '<h1 class = "year-divider-content" >' + publications[i].year + '</h1>' +
-                        
                     '</div>';
             current_year = publications[i].year;
         }
@@ -80,8 +88,7 @@ function showPublications(publications) {
     publications_nav += '</div></div>'
     document.getElementById("all-publications").insertAdjacentHTML('afterbegin',publications_nav);
 
-    // mobile year navigation 
-    
+    // mobile year navigation
     var dropdown_navigation = '<input type="checkbox" class = "dropdown-navigation"><label for "dropdown-navigation"></label></input><div class = "dropdown-navigation-content">'; 
     for(i in years) {
         dropdown_navigation += '<br><a onclick = "closeDropdown()" href = "#publications-year-' + years[i] + '">' + years[i] + '</a>'; 
@@ -91,15 +98,6 @@ function showPublications(publications) {
     for(i in yearDividers) {
         yearDividers[i].insertAdjacentHTML('beforeend',dropdown_navigation); 
     }
-   // document.getElementsByClassName("year-divider-sticky")[0].insertAdjacentHTML('beforeend',dropdown_navigation); 
-    
-    
-   
-   
-    /*year_divider_sticky[0].addEventListener('change', (event) => {
-        document.getElementById('publications-year-' + event.target.value).scrollIntoView();   
-        
-    }); */
 }  
 fetch("http://materials.duke.edu/marco/publications.php")
 .then(function(resp) {

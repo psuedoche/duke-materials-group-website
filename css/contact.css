@@ -1,13 +1,11 @@
-.full-page-content-container a {
-    color: rgb(83, 89, 193);
+.full-page-content-container a, .light-content-block h1 {
+    color: var(--contrast-color-3);
 }
-.light-content-block h1 {
-    color: #5271FF;
-  
-}
+
 .light-content-block {
     width: 100%;
 }
+
 .content-text {
     font-size: 1.5rem;
     line-height: 4rem;

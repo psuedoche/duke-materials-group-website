@@ -1,82 +1,90 @@
 #profiles-container {
-    position: relative; 
-    flex-direction: column;
-    padding: 0 0 2rem 0;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
+    padding: 0 0 2rem 0;
+    position: relative; 
 }
+
 .people-card, .alumni-card {
-    box-shadow: 0 10px 25px 5px rgba(0, 0, 0, 0.2);
-    background: #151515;
+    background: rgb(21, 21, 21);
+    box-shadow: 0 10px 25px 5px rgb(21, 21, 21,0.25);
     display: inline-block;
-    position: relative;
     margin: 20px;
-    text-align: center;
     padding-bottom: 1rem;
+    position: relative;
+    text-align: center;
 }
+
 .people-card {
     min-height: 300px;
     width: 300px;
 }
+
 .alumni-card {
-    min-height: 100px;
     height: auto;
+    min-height: 100px;
     width: 300px;
 }
+
 .current-people, .alumni {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
 .alumni h1 {
     width: 100%;
 }
+
 .card-topper {
-    width: 100%;
-    position: absolute; 
+    background-color: var(--contrast-color-2);
     height: 50px;
-    background-color: rgb(82, 113, 255);
+    position: absolute; 
+    width: 100%;
 }
+
 i {
-    color: rgb(82, 113, 255);
+    color: var(--contrast-color-3);
 }
+
 .profile-img-container {
     border-radius: 50%;
-    position: relative;
-    width: 100px;
+    box-shadow: 0 0 0 5px rgb(21, 21, 21);
     height: 100px;
-    margin: auto;
     margin: 10px auto;
     overflow: hidden;
-    box-shadow: 0 0 0 5px #151515;
+    position: relative;
+    width: 100px;
 }
+
 .profile-img-container img {
+    height: 100%;
     object-fit: cover;
     width: 100%;
-    height: 100%;
 }
+
 .name {
-    position: relative;
-    margin: auto;
-    /* top: 100px; */
-    right: 0;
     bottom: 0;
     left: 0;
-    width: inherit;
-    /* height: 40px; */
+    margin: auto;
+    position: relative;
+    right: 0;
     text-align: center;
+    width: inherit;
 }
-.name h3 {
 
+.name h3 {
     letter-spacing: normal;
 }
+
 .titles {
-    position: relative;
-    padding: 0 10px;
     color: white;
+    padding: 0 10px;
+    position: relative;
     text-align: center;
-  
 }
+
 .titles p {
     font-size: small;
     line-height: normal;
