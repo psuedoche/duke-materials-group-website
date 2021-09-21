@@ -1,0 +1,13 @@
+.light-content-block {
+    padding: 3rem 5rem; 
+    width: 100vw;
+}
+.light-content-block a { 
+    color: var(--contrast-color-3);
+}
+.content-text {
+    margin-bottom: 0;
+}
+.subtitle {
+    margin-top: 1rem;
+}

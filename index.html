@@ -4,78 +4,48 @@
         <title>Curtarolo Materials Group</title>
 
         <!-- CSS -->
-        <link rel = "styleSheet" href="css/publications.css">
-        <link rel = "styleSheet" href="css/styles.css">
-        
+        <link rel="styleSheet" href="css/publications.css">
+        <link rel="styleSheet" href="css/styles.css">
         <meta name="viewport" content="width=device-width">
-        <script type = "text/javascript" src = "js/open_positions.js"></script>
+        
     </head>
     <body>
-     
-        <div id = "mobile-sticky-header"></div>  
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <div id = "menu-bars">
-                <div class = "menu-bar"></div>
-                <div class = "menu-bar"></div>
-                <div class = "menu-bar"></div>
-            </div>
-        </label>
-        <a href = 'index.html' id = "mobile-header-logo"><img src = 'media/logo.svg'></a>
-        
-        
         <div id="top-menu"></div>
-            <div class = "entry-container">
-                <div class = "title">
-                    <h1>Center for Autonomous <br>Materials Design</h1>
-                </div>
-                <p class = "text-block">
-                    Through innovative approaches and state of the art modeling methods, the Center of Autonomous Materials Design develops tools for the discovery of new materials and their properties.
-                </p>
-                <div class = "buttons-container" id = "entry-buttons">
-                    <a href = "aflow.html" type = "button" class = "nav-btn first-btn">Search AFLOW.org &#10095;</a>
-                    <a href = "research.html" type = "button" class = "nav-btn second-btn">Our Research &#10095;</a>
-                </div>
+        <div class="entry-container">
+            <div class="title">
+                <h1>Center for Autonomous <br>Materials Design</h1>
             </div>
-            <div  class = "content-container" id = "open-positions">
-                <div class = "buttons-container">
-                    <a href = "about.html#all-open-positions" type = "button" class = "nav-btn">See All Openings &#10095;</a><br>
-                </div>
+            <p class="text-block">
+                Through innovative approaches and state of the art modeling methods, the Center of Autonomous Materials Design develops tools for the discovery of new materials and their properties.
+            </p>
+            <div class="buttons-container" id="entry-buttons">
+                <a href="aflow.html" type="button" class="nav-btn first-btn">AFLOW &#10095;</a>
+                <a href="research.html" type="button" class="nav-btn second-btn">Our Research &#10095;</a>
             </div>
-            <div class = 'light-content-block'>
-                <div class = "particle-container">
-                    <img src = "media/particle_design_black.svg">
-                </div>
-                <div id = "slideshow-container">
-                    <!-- Arrows -->
-                    <a class="nav-arrow previous" onclick="changeSlideBy(-1)">&#10094;</a>
-                    <a class="nav-arrow next" onclick="changeSlideBy(1)">&#10095;</a>
-                    <!-- dot navigation -->
-                    <div style="text-align:center; margin-top: 3rem">
-                        <span class="dot" onclick="jumpToSlide(1)"></span>
-                        <span class="dot" onclick="jumpToSlide(2)"></span>
-                        <span class="dot" onclick="jumpToSlide(3)"></span>
-                        <!--<span class="dot" onclick="jumpToSlide(4)"></span>-->
-                    </div>
-                </div>
-            </div> 
-        <div class = "light-content-block second-light-content-block">      
-            <h1 id = "research-title">OUR RESEARCH</h1> 
-            <div class = "cards-container" id = "research-cards"></div>
-        </div> 
-        <div class = "content-container" id = "publications">
-            <h1>RECENT PUBLICATIONS</h1>
-            <div class = "loading-spinner"></div>
-            <div class = "cards-container" id = "entry-page-publications"></div>
         </div>
-        <footer id = "footer"></footer>
+        <div  class="content-container" id="open-positions"></div>
+        <div class="light-content-block">      
+            <h1 id="research-title">OUR RESEARCH</h1> 
+            <div class="cards-container" id="research-cards"></div>
+        </div> 
+        <div class="light-content-block">
+            <div class="particle-container">
+                <img src="media/particle_design_black.svg">
+            </div>
+            <div id="slideshow-container"></div>
+        </div> 
+        <div class="content-container" id="publications">
+            <h1>RECENT PUBLICATIONS</h1>
+            <div class="loading-spinner"></div>
+            <div class="cards-container" id="entry-page-publications"></div>
+        </div>
+        <footer id="footer"></footer>
+        <!-- JS -->
+        <script type="text/javascript" src="js/open_positions.js"></script>
+        <script type="text/javascript" src="js/slide_data.js"></script>
+        <script type="text/javascript" src="js/research_data.js"></script>
+        <script type="text/javascript" src="js/publications.js"></script>
+        <script type="text/javascript" src="js/header_footer.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>  
     </body>
-    <!-- JS -->
-    <script type = "text/javascript" src = "js/main.js"></script>
-    <script type = "text/javascript" src = "js/index.js"></script>
-    <script type = "text/javascript" src = "js/index_data.js"></script>
-    <script type = "text/javascript" src = "js/research.js"></script>
-    <script>buildSlides(slides)</script>
-    <script>buildResearchMain(allResearch)</script>
-    <script>displayPositions()</script>
 </html>

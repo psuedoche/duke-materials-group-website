@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>People</title>
+        <title>People–Curtarolo Group</title>
         <!-- CSS -->
-        <link rel = "styleSheet" href="css/styles.css">
-        <link rel = "styleSheet" href="css/people.css">
-        <link rel="stylesheet" href="media/academicons-1.9.1/css/academicons.css"/>
-        <script type = "text/javascript" src = "js/people.js"></script>
-        <script type = "text/javascript" src = "js/people_data.js"></script>
+        <link rel="styleSheet" href="css/styles.css">
+        <link rel="styleSheet" href="css/people.css">
+        <link rel="stylesheet" href="css/academicons-1.9.1/css/academicons.min.css"/>
+        
         <meta name="viewport" content="width=device-width">   
     </head>
     <body>
-        <div id = "mobile-sticky-header"></div>  
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <div id = "menu-bars">
-                <div class = "menu-bar"></div>
-                <div class = "menu-bar"></div>
-                <div class = "menu-bar"></div>
-            </div>
-        </label>
-        <a href = 'index.html' id = "mobile-header-logo"><img src = 'media/logo.svg'></a>
-        <div id = "top-menu">
+        <div id="top-menu"></div>
+        <div class="page-title">
+            <h1>PEOPLE</h1>
         </div>
-        <div class = "page-title"><h1>PEOPLE</h1></div>
-        <div class = "full-page-content-container">
-            <div id = "profiles-container"></div>
+        <div class="full-page-content-container">
+            <div id="profiles-container"></div>
         </div>
-        <footer id = "footer"></footer>
+        <footer id="footer"></footer>
     </body>
     <!-- JS -->
-    <script type = "text/javascript" src = "js/main.js"></script>
-    <script>buildProfiles(people_data)</script>
+    <script type="text/javascript" src="js/header_footer.js"></script>
+    <script type="text/javascript" src="js/people_data.js"></script>
+    <script type="text/javascript" src="js/people.js"></script>
 </html>

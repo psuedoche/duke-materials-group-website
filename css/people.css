@@ -1,9 +1,13 @@
+.full-page-content-container {
+    justify-content: center;
+}
 #profiles-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 0 0 2rem 0;
     position: relative; 
+    max-width: 2000px;
 }
 
 .people-card, .alumni-card {
@@ -34,7 +38,14 @@
 }
 
 .alumni h1 {
+   
+    padding-left: 5rem;
     width: 100%;
+}
+@media only screen and (min-width: 2000px) {
+    .alumni h1{
+        text-align: center;
+    }
 }
 
 .card-topper {

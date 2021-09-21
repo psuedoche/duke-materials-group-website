@@ -1,3 +1,73 @@
+// icons for profiles
+let links = [
+    {   key: 'cv',
+        icon: '<i class="ai ai-cv-square ai-2x ai-inverse"></i>',
+        link: '',
+    },
+    {   key: 'gscholar',
+        icon: '<i class="ai ai-google-scholar-square ai-2x ai-inverse"></i>',
+        link: 'https://scholar.google.com/citations?user=', 
+    }, 
+    {   key: 'orcid',
+        icon: '<i class="ai ai-orcid-square ai-2x ai-inverse"></i>',
+        link: 'https://orcid.org/', 
+    },
+    {   key: 'publons',
+        icon: '<i class="ai ai-publons-square ai-2x ai-inverse"></i>',
+        link: 'https://publons.com/researcher/', 
+    },
+];
+
+let people = [
+    "stefano-curtarolo",
+    "cormac-toher",
+    "frisco-rose",
+    "mike-mehl",
+    "manuela-damian",
+    "andriy-smolyanyuk",
+    "corey-oses",
+    "david-hicks",
+    "hagen-eckert",
+    "marco-esters",
+    "simon-divilov",
+    "cheryl-li",
+    "harry-wang",
+    "mana-rose", 
+];
+
+let alumni = [ 
+    "raghav-bhatt",
+    "christina-patterson",
+    "stuart-ki",
+    "rico-friedrich",
+    "demet-usanmaz",
+    "denise-ford","eric-gossett",
+    "pranab-sarker","pinku-nath", 
+    "pauline-colinet",
+    "john-paul-oses",
+    "geena-gomez",
+    "harvey-shi",
+    "jose-javier-plata-ramos",
+    "eric-perim",
+    "junkai-xue",
+    "camillo-calderon",
+    "cheng-ing-chicia",
+    "kesong-yang",
+    "shidong-wang",
+    "roman-chepulskyy",
+    "wahyu-setyawan",
+    "michal-jahnatek",
+    "felipe-cervantes-sodi",
+    "aleksey-nkolmogorov",
+    "aiqin-jiang",
+    "neha-awasthi",
+    "janan-hou",
+    "kevin-rasch",
+    "richard-taylor",
+    "carlo-desanto",
+    "allison-stelling",
+    "luis-agapito",
+];
 let people_data = {
     "stefano-curtarolo" : {
         name: "Stefano Curtarolo",
@@ -5,7 +75,6 @@ let people_data = {
             "Edmund T. Pratt, Jr. Distinguished Professor Materials Science, Electrical Engineering and Physics", 
             "Director, Center for Autonomous Materials Design"
         ],
-        current: "",
         contact: "stefano@duke.edu",
         cv: "http://materials.duke.edu/auro/cv.pdf",
         gscholar: "zuFUb-YAAAAJ",
@@ -16,18 +85,14 @@ let people_data = {
         titles: [
             "Administrative Director"
         ],
-        current: "",
         contact: "mdamian@duke.edu",
-        
     },
     "mike-mehl" : {
         name: "Mike Mehl",
         titles: [
             "Assistant Research Professor"
         ],
-        current: "",
         contact: "michael.mehl@duke.edu",
-        
     },
     "cormac-toher" : {
         name: "Cormac Toher",
@@ -35,7 +100,6 @@ let people_data = {
             "Assistant Research Professor",
             "Director, Center for Autonomous Materials Design"
         ],
-        current: "",
         contact: "cormac.toher@duke.edu",
         gscholar: "BfiQq-4AAAAJ",
         orcid: "0000-0001-7073-8690", 
@@ -46,10 +110,8 @@ let people_data = {
             "Assistant Research Professor",
             " High Performance Computing Specialist"
         ],
-        current: "",
         contact: "frisco.rose@duke.edu",
-        gscholar: "", 
-
+        gscholar: "",
     },
     "hagen-eckert" : {
         name: "Hagen Eckert",
@@ -61,14 +123,12 @@ let people_data = {
         gscholar: "sgdimZ4AAAAJ", 
         orcid: "0000-0003-4771-1435", 
         publons: "2769588/hagen-eckert/",
-        
     },
     "marco-esters" : {
         name: "Marco Esters",
         titles: [
             "Postdoctoral Associate"
         ],
-        current: "",
         contact: "marco.esters@duke.edu",
         gscholar: "sJLfGh0AAAAJ", 
         orcid: "0000-0002-8793-2200", 
@@ -78,7 +138,6 @@ let people_data = {
         titles: [
             "Postdoctoral Associate"
         ],
-        current: "",
         contact: "david.hicks@duke.edu",
         gscholar: "G6udP48AAAAJ", 
         orcid: "0000-0001-5813-6785", 
@@ -88,7 +147,6 @@ let people_data = {
         titles: [
             "Postdoctoral Associate"
         ],
-        current: "",
         contact: "corey.oses@duke.edu",
         cv: "https://coreyoses.com/",
         gscholar: "Za7m4CMAAAAJ", 
@@ -99,7 +157,6 @@ let people_data = {
         titles: [
             "Postdoctoral Associate"
         ],
-        current: "",
         contact: "andriy.smolyanyuk@duke.edu",
         gscholar: "", 
         orcid: "0000-0002-4859-5977", 
@@ -109,7 +166,6 @@ let people_data = {
         titles: [
             "Postdoctoral Associate"
         ],
-        current: "",
         contact: "simon.divilov@duke.edu",
         gscholar: "9LEcBjoAAAAJ", 
         orcid: "", 
@@ -119,79 +175,55 @@ let people_data = {
         titles: [
             "Visiting Professor"
         ],
-        current: "",
-        contact: "",
-        
     },
     "yoav-lederer" : {
         name: "Yoav Lederer",
         titles: [
             "Visiting Researcher"
         ],
-        current: "",
-        contact: "",
-        
     },
     "cheryl-li" : {
         name: "Cheryl Li",
         titles: [
             "Undergraduate Student"
         ],
-        current: "",
-        contact: "",
-        
     },
     "harry-wang" : {
         name: "Harry Wang",
         titles: [
             "Undergraduate Student"
         ],
-        current: "",
-        contact: "",
-        
     },
     "christina-patterson" : {
         name: "Christina Patterson",
         titles: [
             "Visiting REU Undergraduate Student"
         ],
-        current: "",
-        contact: "",
-        
     },
     "raghav-bhatt" : {
         name: "Raghav Bhatt",
         titles: [
             "Visiting REU Undergraduate Student"
         ],
-        current: "",
-        contact: "",
-        
     },
     "mana-rose" : {
         name: "Mana Rose",
         titles: [
             "Visiting high-school Student"
         ],
-        current: "",
-        contact: "",
-        
     },
     "stuart-ki" : {
         name: "Stuart Ki",
         titles: [
           "Visiting Undergraduate Student"  
         ],
-        current: "",
-        contact: "",  
-    },
+          },
     "rico-friedrich" : {
         name: "Rico Friedrich",
         titles: [
             "Postdoctoral Researcher"
         ],
         current: "Group Leader, Helmholtz-Zentrum Dresden-Rossendorf - HZDR, Institute of Ion Beam Physics and Materials Research",
-        contact: "",  
     },
     "demet-usanmaz" : {
         name: "Demet Usanmaz",
@@ -199,7 +231,6 @@ let people_data = {
             "Postdoctoral Researcher "
         ],
         current: "Professor, Kettering University",
-        contact: "", 
     },
     "denise-ford" : {
         name: "Denise Ford",
@@ -207,103 +238,78 @@ let people_data = {
            "Postdoctoral Researcher" 
         ], 
         current: "Program Manager, Army Research Laboratory",
-        contact: "", 
     },
     "eric-gossett" : {
         name: "Eric Gossett",
         titles: [
             "Graduate Student"   
         ], 
-        current: "",
-        contact: "", 
     },
     "pranab-sarker" : {
         name: "Pranab Sarker",
         titles: [
             "Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
-    },
+         },
     "pinku-nath" : {
         name: "Pinku Nath",
         titles: [
             "Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
     },
     "pauline-colinet" : {
         name: "Pauline Colinet",
         titles: [
             "Visiting Graduate Student"
         ], 
-        current: "",
-        contact: "", 
-    },
+         },
     "john-paul-oses" : {
         name: "John Paul Oses",
         titles: [
             "Visiting Undergraduate Student"
         ], 
-        current: "",
-        contact: "", 
     },
     "geena-gomez" : {
         name: "Geena Gomez",
         titles: [
             "Visiting Undergraduate Student"
         ], 
-        current: "",
-        contact: "", 
-    },
+         },
     "harvey-shi" : {
         name: "Harvey Shi",
         titles: [
             "Visiting Undergraduate Student"
         ], 
-        current: "",
-        contact: "", 
     },
     "jose-javier-plata-ramos" : {
         name: "Jose Javier Plata Ramos",
         titles: [
             "Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
-    },
+         },
     "eric-perim" : {
         name: "Eric Perim",
         titles: [
             "Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
     },
     "junkai-xue" : {
         name: "Junkai Xue",
         titles: [
             "Graduate Student"
         ], 
-        current: "",
-        contact: "", 
     },
     "camillo-calderon" : {
         name: "Camillo Calderon",
         titles: [
             "Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
-    },
+         },
     "cheng-ing-chicia" : {
         name: "Cheng-Ing Chicia",
         titles: [
           "Postdoctoral Researcher"  
         ], 
-        current: "",
-        contact: "", 
     },
     "kesong-yang" : {
         name: "Kesong Yang",
@@ -311,15 +317,12 @@ let people_data = {
             "Postdoctoral Researcher"
         ], 
         current: "Professor, University of California San Diego",
-        contact: "", 
-    },
+       },
     "shidong-wang" : {
         name: "Shidong Wang",
         titles: [
             "Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
     },
     "roman-chepulskyy" : {
         name: "Roman Chepulskyy",
@@ -327,7 +330,6 @@ let people_data = {
             "Postdoctoral Researcher"
         ], 
         current: "Samsung Electronics",
-        contact: "", 
     },
     "wahyu-setyawan" : {
         name: "Wahyu Setyawan",
@@ -335,7 +337,6 @@ let people_data = {
             "Graduate Student and Postdoctoral Researcher"
         ], 
         current: "PNNL",
-        contact: "", 
     },
     "michal-jahnatek" : {
         name: "Michal Jahnatek",
@@ -343,7 +344,6 @@ let people_data = {
             "Postdoctoral Researcher"
         ], 
         current: "IBM",
-        contact: "", 
     },
     "felipe-cervantes-sodi" : {
         name: "Felipe Cervantes Sodi",
@@ -351,7 +351,6 @@ let people_data = {
             "Visiting Graduate Student from University of Cambridge, UK"
         ], 
         current: "Professor, Universidad Iberoamericana, Mexico D. F. MEXICO",
-        contact: "", 
     },
     "aleksey-nkolmogorov" : {
         name: "Aleksey N. Kolmogorov",
@@ -359,78 +358,53 @@ let people_data = {
             "Postdoctoral Researcher"
         ], 
         current: "Professor, State University of New York, Binghamton",
-        contact: "", 
     },
     "aiqin-jiang" : {
         name: "Aiqin Jiang",
         titles: [
             "Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
     },
     "neha-awasthi" : {
         name: "Neha Awasthi",
         titles: [
             "Graduate Student"
         ], 
-        current: "",
-        contact: "", 
     },
     "janan-hou" : {
         name: "Janan Hou",
         titles: [
             "Graduate Student"
         ], 
-        current: "",
-        contact: "", 
     },
     "kevin-rasch" : {
         name: "Kevin Rasch",
         titles: [
             "Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
     },
     "richard-taylor" : {
         name: "Richard Taylor",
         titles: [
             "Graduate Student and Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
     },
     "carlo-desanto" : {
         name: "Carlo De Santo",
         titles: [
             "Graduate Student visiting from Politecnico di Milano"
         ], 
-        current: "",
-        contact: "", 
     },
     "allison-stelling" : {
         name: "Allison Stelling",
         titles: [
             "Postdoctoral Researcher"
         ], 
-        current: "",
-        contact: "", 
     },
     "luis-agapito" : {
         name: "Luis Agapito",
         titles: [
             "Visiting Researcher"     
         ], 
-        current: "",
-        contact: "", 
-    },
-    "" : {
-        name: "",
-        titles: [
-            
-        ], 
-        current: "",
-        contact: "", 
     },
 }

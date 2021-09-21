@@ -3,7 +3,7 @@
     --main-bg-color: rgb(65, 65, 65);
     --gray-gradient: linear-gradient(rgb(38, 38, 38), rgb(60,60,60));
     --contrast-color-1: rgb(0, 194, 203); 
-    --contrast-color-2: rgb(69, 75, 175);
+    --contrast-color-2: rgb(71, 120, 184);
     --contrast-color-3: rgb(83, 89, 193); 
     --hover-color: rgb(31, 115, 189);
 }
@@ -34,7 +34,6 @@ p, li {
     font-size: large;
 }
 
-/* Write a Js function that does this? */
 .light-content-block h1, 
 .light-content-block h2, 
 .light-content-block h3, 
@@ -103,7 +102,7 @@ p, li {
 .full-page-content-container {
     display: flex;
     position: relative;
-    min-height: 80vh;
+    min-height: 70vh;
 }
 
 .page-title {
@@ -141,16 +140,20 @@ p, li {
   
 }
 
-.second-light-content-block {
+.light-content-block:nth-child(2n) {
     background: rgb(230, 226, 226);
 }
 
 .subtitle {
     color: #5271FF;
+    letter-spacing: 0.1em;
+    max-width: 1500px;
+    margin: auto;
+    text-align: left;
 }
 
 footer {
-    background: rgb(32, 32, 32);
+    background: var(--gray-gradient);
     min-height: 10rem;
     padding: 2rem;
     text-align: center;
@@ -218,6 +221,10 @@ footer p {
     background: var(--contrast-color-3);
 }
 
+#publications-btn {
+    justify-content: center;
+}
+
 .nav-btn:hover {
     background-color: var(--hover-color);
     transform: scale(1.05);
@@ -237,7 +244,8 @@ footer p {
 .content-text {
     font-weight: 200;
     line-height: 1.5em;
-    margin: 2em;
+    margin: 2em auto;
+    max-width: 1500px;
     text-align: left;
 }
 
@@ -267,25 +275,25 @@ footer p {
 
 @keyframes fade-in {
     0% {
-        opacity:0;
+        opacity: 0;
     }
     100% {
-        opacity:1;
+        opacity: 1;
     } 
 }
 @keyframes fade-out {
     0% {
-        opacity:1;
+        opacity: 1;
     }
     100% {
-        opacity:0;
+        opacity: 0;
     } 
 }
 
 .slide {
     align-self: center;
     animation: fade-in 4s ease;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     justify-self: center;
@@ -318,18 +326,23 @@ footer p {
     transition: 0.5s ease;
 }
 
-.next {
+#next-arrow {
     right: 0;
     margin-right: 10px;   
 }
 
-.previous {
+#previous-arrow {
     left: 0;
     margin-left: 10px; 
 }
 
 .nav-arrow:hover {
     color: rgba(0,0,0,0.8);
+}
+
+#dot-navigation {
+    margin-top: 3rem;
+    text-align: center; 
 }
 
 .dot {
@@ -343,7 +356,7 @@ footer p {
     width: 15px;
 }
 
-.active, .dot:hover  {
+.dot:hover {
     background-color: #717171;
 }
 
@@ -386,9 +399,11 @@ footer p {
     font-weight: 400;
     height: 4rem;
 }
+
 .research-card p {
     height: 6rem;
 }
+
 .research-card div {
     display: flex;
     justify-content: center;
@@ -396,9 +411,9 @@ footer p {
 
 /* Loading animation for publications */
 @keyframes spinner {
-	to {
-		transform: rotate(360deg);
-	}
+    to {
+	    transform: rotate(360deg);
+    }
 }
 
 .loading-spinner {
@@ -420,7 +435,7 @@ footer p {
 }
 
 .horizontal-card h1 {
-    color: var(--contrast-color-2);
+    color: var(--contrast-color-3);
     margin: 1rem;
     letter-spacing: normal;
 }
@@ -435,12 +450,7 @@ footer p {
 
 /* MOBILE */
 @media only screen and (max-width: 600px) {
-    body {
-        background-image: url("../media/mainBg-mobile-01.png"); 
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-
+    
     h1, h2 {
         letter-spacing: 0.2rem;
     }
@@ -554,5 +564,12 @@ footer p {
     
     .publication-image img {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+    .page-title{
+        padding-left: 0;
+        text-align: center;
     }
 }

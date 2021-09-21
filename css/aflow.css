@@ -6,3 +6,7 @@
     padding: 3rem 5rem; 
     width: 100vw;
 }
+
+.subtitle img {
+    max-width: 100%;
+}

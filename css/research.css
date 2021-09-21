@@ -2,15 +2,21 @@
     width: 100%;
 }
 
-.acordion-menu {
+.light-content-block h1 {
+    color: white;
+}
+
+#research-acordion-menu {
     margin: auto;
     padding: 1rem;
     width: auto;
 }
 
-.acordion-content{
+.acordion-content {
     background-color: white;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    column-gap: 10px;
+    display: flex;
     font-weight: 200;
     line-height: 2rem;
     overflow: hidden;
@@ -24,7 +30,7 @@ details {
     max-width: 1500px;
     overflow: hidden;
     padding:1em;
-    transition: max-height 0.5s ease;
+    transition: max-height 0.25s ease;
 }
 
 details:not([open]) {
@@ -50,6 +56,7 @@ details:nth-child(3n + 3) > summary {
 summary {
     box-shadow: none;
     color:white;
+    cursor: pointer;
     list-style: none;
     padding: 2em;
     position: relative;
@@ -86,6 +93,21 @@ summary h1 {
 
 details img {
     margin: auto;
-    max-height: 1000px;
-    max-width: 1000px;
+    max-height: 600px;
+    max-width: 600px;
+    width: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+    .acordion-content {
+        display: block;
+        word-break: break-all;
+    }
+    a {
+        word-break: break-all;
+    }
+    details img {
+        min-width: 300px;
+        width: 100%;
+    }
 }

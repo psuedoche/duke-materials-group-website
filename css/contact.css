@@ -3,11 +3,42 @@
 }
 
 .light-content-block {
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
 
-.content-text {
-    font-size: 1.5rem;
+.content-text, #address {
+    color: var(--contrast-color-3);
     line-height: 4rem;
-    margin: 1rem;
+}
+
+.acordion-content a {
+    font-size: large;
+}
+
+#contact-info {
+    display: inline-block;
+    max-width: 800px;
+    width: 50%;
+}
+
+#address {
+    margin: 0;
+}
+
+#map {
+    display: inline-block;
+    max-width: 800px;
+    min-width: 500px;
+    padding: 3rem;
+    width: 45%;
+}
+
+#map iframe {
+    border:0;
+    height: 100%;
+    max-height: 500px; 
+    max-width: 800px;
+    width: 100%;
 }

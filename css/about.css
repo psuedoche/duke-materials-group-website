@@ -9,7 +9,6 @@
 
 .content-text {
     line-height: 2rem;
-    margin: 2rem 0;
     max-width: 1500px;
 }
 
@@ -17,7 +16,19 @@ li {
     line-height: 2rem;
 }
 
-#all-open-positions h3, #all-open-positions p, h2, a {
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+#group-image {
+    max-height: 600px;
+    max-width: 100%;
+}
+
+#open-positions-content h3, #open-positions-content p, h2, a {
     display: inline-block;
     letter-spacing: normal;
     margin: 0.5rem;
